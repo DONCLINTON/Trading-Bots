@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "strategies": [
+    {
+      "id": "jump10_martingale",
+      "name": "Jump 10 Rise/Fall Automated",
+      "description": "Automated trend follower optimized for Jump 10 Index using a conservative Martingale multiplier tier.",
+      "market": "Jump 10 Index",
+      "trade_type": "Rise/Fall",
+      "win_rate_tag": "High Risk",
+      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/xml_files/jump10_martingale.xml"
+    },
+    {
+      "id": "vol100_digits",
+      "name": "Vol 100 Digits Differ Strategy",
+      "description": "High-frequency digit analysis bot executing Differs contracts on Volatility 100 Index.",
+      "market": "Volatility 100 Index",
+      "trade_type": "Digits",
+      "win_rate_tag": "90% Stat",
+      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/xml_files/vol100_digits.xml"
+    }
+  ]
+}

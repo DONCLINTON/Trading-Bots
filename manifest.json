@@ -2,22 +2,31 @@
   "version": "1.0.0",
   "strategies": [
     {
-      "id": "jump10_martingale",
-      "name": "Jump 10 Rise/Fall Automated",
-      "description": "Automated trend follower optimized for Jump 10 Index using a conservative Martingale multiplier tier.",
-      "market": "Jump 10 Index",
+      "id": "roi_20_percent",
+      "name": "20% ROI Strategy",
+      "description": "Automated growth strategy optimized for consistent compound targets.",
+      "market": "Derived Indices",
       "trade_type": "Rise/Fall",
-      "win_rate_tag": "High Risk",
-      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/xml_files/jump10_martingale.xml"
+      "win_rate_tag": "Conservative",
+      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/20%25%20ROI.xml"
     },
     {
-      "id": "vol100_digits",
-      "name": "Vol 100 Digits Differ Strategy",
-      "description": "High-frequency digit analysis bot executing Differs contracts on Volatility 100 Index.",
-      "market": "Volatility 100 Index",
+      "id": "bx_5_automated",
+      "name": "BX-5 Strategy",
+      "description": "High-velocity algorithm designed for rapid execution loops.",
+      "market": "Volatility Indices",
+      "trade_type": "Rise/Fall",
+      "win_rate_tag": "Balanced",
+      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/BX-5.xml"
+    },
+    {
+      "id": "test_bot_3",
+      "name": "TEST BOT 3",
+      "description": "High-frequency experimental test bot configuration.",
+      "market": "Continuous Indices",
       "trade_type": "Digits",
-      "win_rate_tag": "90% Stat",
-      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/xml_files/vol100_digits.xml"
+      "win_rate_tag": "Testing",
+      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/TEST%20BOT%203.XML"
     }
   ]
 }

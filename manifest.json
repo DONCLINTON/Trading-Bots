@@ -2,6 +2,15 @@
   "version": "1.0.0",
   "strategies": [
     {
+      "id": "reset_cruise_ai",
+      "name": "Reset and Cruise AI",
+      "description": "Smart recovery algorithm designed to reset parameters and cruise back into profit targets smoothly.",
+      "market": "Derived Indices",
+      "trade_type": "Rise/Fall",
+      "win_rate_tag": "Smart AI",
+      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/Reset%20and%20cruise%20Ai.XML"
+    },
+    {
       "id": "roi_20_percent",
       "name": "20% ROI Strategy",
       "description": "Automated growth strategy optimized for consistent compound targets.",
@@ -18,15 +27,6 @@
       "trade_type": "Rise/Fall",
       "win_rate_tag": "Balanced",
       "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/BX-5.xml"
-    },
-    {
-      "id": "test_bot_3",
-      "name": "TEST BOT 3",
-      "description": "High-frequency experimental test bot configuration.",
-      "market": "Continuous Indices",
-      "trade_type": "Digits",
-      "win_rate_tag": "Testing",
-      "xml_url": "https://raw.githubusercontent.com/DONCLINTON/Trading-Bots/main/TEST%20BOT%203.XML"
     }
   ]
 }

@@ -1,0 +1,1162 @@
+<xml xmlns="https://developers.google.com/blockly/xml" is_dbot="true" collection="false">
+  <variables>
+    <variable id="`=KyXio0t7#)a7ewul()">martingale:resultIsWin</variable>
+    <variable id="]dHn,alxU4:`V7aFWz+9">+256757815846 for more information.</variable>
+    <variable id="?^27,*(^pAie=S=e]MF%">martingale:profit</variable>
+    <variable id="wJ#9VZx~j,}X(b00nt(%">pattern</variable>
+    <variable id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</variable>
+    <variable id="K/KD$k2xbA?{-Tooy5fg">martingale:tradeAgain</variable>
+    <variable id="Zbvwr.CpoPlw:|ea(p+X">text</variable>
+    <variable id="QVgmz@/y~j*FU~^xzA{Q">martingale:expectedProfit</variable>
+    <variable id=";:xeYF6WeSuF:TVh8b3x">martingale:size</variable>
+    <variable id="_R#c5s;%q+4NtI)2)MC^">martingale:amount</variable>
+    <variable id="P0JVcK!@E!gy::?QV@;^">tick4</variable>
+    <variable id="9PLw!1uWN3{RWC7}!euS">text1</variable>
+    <variable id="3m([oVg3^OCTbG|INlxI">text2</variable>
+    <variable id="z+BgrJTJ%4go+knUnMe^">martingale:maximumLoss</variable>
+    <variable id="j%Yu.)j[z%#8t*tK{{9{">tick3</variable>
+    <variable id="mUU;4vD5EQ]t/4`RYyXe">tick2</variable>
+    <variable id="4]OMOa$~ZaX`kd4@99x7">martingale:multiplierSize</variable>
+    <variable id="{@Cf|OY#3-RIJ7(C6;p!">text3</variable>
+    <variable id="3.v1/}}sfHXEDW,y1OlS">text4</variable>
+    <variable id="pk|m3+UR(Z`_=RZQMwTs">tick1</variable>
+    <variable id="bPS*6,*)uEsccQxxho5m">text5</variable>
+    <variable id=")yJp39aLu^1J5YngnIvH">text7</variable>
+    <variable id="]E3,:*/`6fjYRJH;ijkl">text6</variable>
+  </variables>
+  <block type="trade_definition" id="1;3a:4qZ@HeJ+C+7tSnt" deletable="false" x="0" y="110">
+    <statement name="TRADE_OPTIONS">
+      <block type="trade_definition_market" id="1s@xDAvH^/Hx`Y|AR@tU" deletable="false" movable="false">
+        <field name="MARKET_LIST">synthetic_index</field>
+        <field name="SUBMARKET_LIST">random_index</field>
+        <field name="SYMBOL_LIST">1HZ75V</field>
+        <next>
+          <block type="trade_definition_tradetype" id="%j{S35,0})OMNIqZA-xZ" deletable="false" movable="false">
+            <field name="TRADETYPECAT_LIST">digits</field>
+            <field name="TRADETYPE_LIST">overunder</field>
+            <next>
+              <block type="trade_definition_contracttype" id="{Xj}KkUu8tNYjK_C#jGv" deletable="false" movable="false">
+                <field name="TYPE_LIST">DIGITOVER</field>
+                <next>
+                  <block type="trade_definition_candleinterval" id="w4G{Gb`!8MMio,srUcu*" deletable="false" movable="false">
+                    <field name="CANDLEINTERVAL_LIST">60</field>
+                    <next>
+                      <block type="trade_definition_restartbuysell" id="bYl{;DbU(kL,#?1?A#P+" deletable="false" movable="false">
+                        <field name="TIME_MACHINE_ENABLED">FALSE</field>
+                        <next>
+                          <block type="trade_definition_restartonerror" id="#/.YRWw/A8t:R,x7xV#p" deletable="false" movable="false">
+                            <field name="RESTARTONERROR">TRUE</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="INITIALIZATION">
+      <block type="text_print" id="G-j2G$bf$H{I5XbsE^b[">
+        <value name="TEXT">
+          <shadow type="text" id="8JDqf_S,$_uE4%CYwaAs">
+            <field name="TEXT">This is a reset &amp; cruise trading bot. Find more bots at donbots.netlify.app</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="text_join" id="}NLRDJ@qivyYGF3noH5(">
+            <field name="VARIABLE" id="Zbvwr.CpoPlw:|ea(p+X">text</field>
+            <statement name="STACK">
+              <block type="text_statement" id=".=]p4D,TCBN#YFzbe*.m" collapsed="true">
+                <value name="TEXT">
+                  <shadow type="text" id="}S[7?bxBO)+/}QwB!V,,">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="text" id="ToZ+j*bPMwQpq3H9,.EO" collapsed="true">
+                    <field name="TEXT">DONBOT #2. RESET&amp;CRUISE TYPE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="notify" id="xF-}Z(%ogirV;E`i]FK(" collapsed="true">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">announcement</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="6i39e:Y}s~/L)D=]?J4W">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="variables_get" id="0{gzRLdP6}@#jR36[lpf">
+                    <field name="VAR" id="Zbvwr.CpoPlw:|ea(p+X">text</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="SUBMARKET">
+      <block type="trade_definition_tradeoptions" id="`D-%^V|%uaRv#oc!H^Ga">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" has_first_barrier="false" has_second_barrier="false" has_prediction="true"></mutation>
+        <field name="DURATIONTYPE_LIST">t</field>
+        <value name="DURATION">
+          <block type="math_number" id="C5[xH^jUo(#08:-#f~83">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="AMOUNT">
+          <block type="procedures_callreturn" id="$(K_TyuI3xdFCz(9BE*_">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" name="Traditional Martingale System Stake Amount"></mutation>
+          </block>
+        </value>
+        <value name="PREDICTION">
+          <shadow type="math_number_positive" id="mLD~hMbck].m~aMJ7S^K" inline="true">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="during_purchase" id="SO.t=s+qW8O(Y}QIV_Mi" collapsed="true" x="894" y="110">
+    <statement name="DURING_PURCHASE_STACK">
+      <block type="controls_if" id="tVtt=-mll1/d(:[z#8d9">
+        <value name="IF0">
+          <block type="check_sell" id="e@)O=r#YFWKf9yWovENx"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="after_purchase" id=":,-IfC64pPo]dP?7x-X9" x="894" y="256">
+    <statement name="AFTERPURCHASE_STACK">
+      <block type="controls_if" id="OgrlV5:iIZccll0HF)1S">
+        <value name="IF0">
+          <block type="procedures_callreturn" id="Gaha!Bk(#fMObTipW]Ze">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" name="Ultimate Traditional Martingale System Trade Again">
+              <arg name="martingale:profit"></arg>
+              <arg name="martingale:resultIsWin"></arg>
+            </mutation>
+            <value name="ARG0">
+              <block type="read_details" id="3m)]v7c_Xlp*m=5R@OSn">
+                <field name="DETAIL_INDEX">4</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="contract_check_result" id="wn;{CG-HH%Gx^xY%!Zs{">
+                <field name="CHECK_RESULT">win</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="trade_again" id="QJ:r-{d(ObA_.d#wSrp,"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="]n_O+m|(1q2k/Xw*1%J:" collapsed="true" deletable="false" x="0" y="952">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="controls_if" id="m}3:x77s;+lrOP5@7;$c">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="qsJiis`exM,`y)to.q~:">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="~~k~CJP8L3_1lJ9jF^D2">
+                <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="[9Gi~1zt;4V[p_uX$d_6">
+                <field name="NUM">221</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="purchase" id="tMqT!c/zi*KQv|6oE3Wu">
+            <field name="PURCHASE_LIST">DIGITOVER</field>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="d6/l36^`osd9$-_P|j_O">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="[WBpBz5vX8!c=#spZ57f">
+                <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="_j8BpqXu(,6_Rt%S!vyS">
+                <field name="NUM">211</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="purchase" id="Bqm}uUU8ZS7ZWO^|3K)[">
+            <field name="PURCHASE_LIST">DIGITOVER</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="n[.=2(tr8u5^}W4?AAa8" x="0" y="1048">
+    <field name="NAME">Traditional Martingale System Stake Amount</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="R(C^9fo+p~vQ[NBkcQIY">
+        <value name="IF0">
+          <block type="logic_compare" id="FsUJE%VTouh;%l]b[gxb">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="?b)DAl$9o~O6*-d8Kdd:">
+                <field name="VAR" id="QVgmz@/y~j*FU~^xzA{Q">martingale:expectedProfit</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_null" id="ho6Y,5fMJ*dBl-@:y.b5"></block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="T(2ht,U3kDXpmh6Uc7Qz">
+            <field name="VAR" id="QVgmz@/y~j*FU~^xzA{Q">martingale:expectedProfit</field>
+            <value name="VALUE">
+              <block type="math_number" id="?0p8[d;j~d#Jo^%hZ(/l">
+                <field name="NUM">27</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="`(}L,6r(UX3O/|~y{@[+">
+            <value name="IF0">
+              <block type="logic_compare" id="w^yE0@~gr=+4f[,lkhAV">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="K8E^?-[=,8n_)IZz-qW#">
+                    <field name="VAR" id="z+BgrJTJ%4go+knUnMe^">martingale:maximumLoss</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_null" id=":0NuhHSs;oLUvAB,~J|E"></block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="gl#7H`yh:Rf}(hJ+5TW`">
+                <field name="VAR" id="z+BgrJTJ%4go+knUnMe^">martingale:maximumLoss</field>
+                <value name="VALUE">
+                  <block type="math_number" id="}3tSS,1^{vdeRpYwarBB">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="%7Zq~0W?xo$?3nF[!d}y">
+                <value name="IF0">
+                  <block type="logic_compare" id="S3S$14MFV{N3E]FUauY~">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="CU.3HcMQW5In.eWc9n-4" collapsed="true">
+                        <field name="VAR" id="_R#c5s;%q+4NtI)2)MC^">martingale:amount</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_null" id="{}7}c5s*|d{FNoGi}Du`"></block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="rF}fwe)0T507*J4h[wnI" collapsed="true">
+                    <field name="VAR" id="_R#c5s;%q+4NtI)2)MC^">martingale:amount</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="lY0oBYg,)VA=#)dc~If-">
+                        <field name="NUM">1.05</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="j$foD4w+(me_9wJ;~-pz" collapsed="true">
+                    <value name="IF0">
+                      <block type="logic_compare" id="b!~m::`~szK~ED:J265s">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get" id=";ff.|mG}j!VpXD].fIaE">
+                            <field name="VAR" id=";:xeYF6WeSuF:TVh8b3x">martingale:size</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_null" id="24RQx{/p,sE1o6MS4q`5"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="O^)QhQQF;r^L~;UrPhco" collapsed="true">
+                        <field name="VAR" id="4]OMOa$~ZaX`kd4@99x7">martingale:multiplierSize</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="P%7U.ud%p+kTT$ZWkR]q">
+                            <field name="NUM">1.05</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="m!v-+s|]b(28QKyMMAj!" collapsed="true">
+                            <field name="VAR" id=";:xeYF6WeSuF:TVh8b3x">martingale:size</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="t7z!A+]0f^QKx8|ppJLT">
+                                <field name="NUM">1.05</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="f*0YDLmSjOV%g]T+Pvj5" collapsed="true">
+                        <value name="IF0">
+                          <block type="logic_compare" id="l1=R//Jd8I3f**oMjSSj">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="mAo3n?L|;z7`]n[FS3fw">
+                                <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_null" id="dd4t*`j#oR+r`|?jspp!"></block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="Nvw8knw3oI=RC_^x1F7*" collapsed="true">
+                            <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="pmHO)=dzaGnP^`Rfn-{R">
+                                <field name="NUM">1.05</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="math_arithmetic" id="8T+$,vCUFxJmEuRsQm,w">
+        <field name="OP">MULTIPLY</field>
+        <value name="A">
+          <shadow type="math_number" id="}I`|HpjJ/wTwX;eCA6gE">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="variables_get" id="fl#;_CV=!rFIG3;J%:%(">
+            <field name="VAR" id=";:xeYF6WeSuF:TVh8b3x">martingale:size</field>
+          </block>
+        </value>
+        <value name="B">
+          <shadow type="math_number" id="i`;=;Z6MIMqn22BB.q=g">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="variables_get" id="/i}vDFrE7n~966z)~_{m">
+            <field name="VAR" id="_R#c5s;%q+4NtI)2)MC^">martingale:amount</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="tick_analysis" id="%]o6bAPM:I2LrF-1C9[l" collapsed="true" x="0" y="1940">
+    <statement name="TICKANALYSIS_STACK">
+      <block type="variables_set" id="2zk2oSz6tjHwFsPB2P^:">
+        <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+        <value name="VALUE">
+          <block type="math_number" id="}F0:vPC{I7EF|mCcmC`E">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="oZZ_H;IIPer1us72Bk4z">
+            <field name="VAR" id="P0JVcK!@E!gy::?QV@;^">tick4</field>
+            <value name="VALUE">
+              <block type="variables_get" id="]i-KD$BoDhH@m{@#P`rL">
+                <field name="VAR" id="j%Yu.)j[z%#8t*tK{{9{">tick3</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id=":nD`e!3}vHLiwViDLW`k">
+                <field name="VAR" id="j%Yu.)j[z%#8t*tK{{9{">tick3</field>
+                <value name="VALUE">
+                  <block type="variables_get" id=",ntw_n_v[@m?+0I!aST.">
+                    <field name="VAR" id="mUU;4vD5EQ]t/4`RYyXe">tick2</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="dRVW/,)qdaSxF*lu!/aO">
+                    <field name="VAR" id="mUU;4vD5EQ]t/4`RYyXe">tick2</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id=")SeGLPgw+4^51mUigE2@">
+                        <field name="VAR" id="pk|m3+UR(Z`_=RZQMwTs">tick1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="4K0*K]upuZv`qZO2T4M!">
+                        <field name="VAR" id="pk|m3+UR(Z`_=RZQMwTs">tick1</field>
+                        <value name="VALUE">
+                          <block type="tick" id="*mQYgYc~*T^GC$s8V9|."></block>
+                        </value>
+                        <next>
+                          <block type="controls_if" id="3TYqS+-gqt?0;MTRvK,n">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" elseif="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_compare" id="pOnJMrjbA-_{nmLpMmXT">
+                                <field name="OP">GT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="e#/z])23mF1.+.]PDz)J">
+                                    <field name="VAR" id="pk|m3+UR(Z`_=RZQMwTs">tick1</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="(gB9fpaq}12}6Xp@{jpf">
+                                    <field name="VAR" id="mUU;4vD5EQ]t/4`RYyXe">tick2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="math_change" id="8#Wcjfuy|*,Uq:~-WQyw">
+                                <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+                                <value name="DELTA">
+                                  <shadow type="math_number" id="s`}_winzNWXXY~`Lh-KW">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="math_number" id="*Vy3c*R)Vq?#QfRJ$yQc">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <value name="IF1">
+                              <block type="logic_compare" id="U`LqZ|v,AcKr0julQD1_">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="7heu!M8YtKIpmbWu}5E?">
+                                    <field name="VAR" id="pk|m3+UR(Z`_=RZQMwTs">tick1</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="$0.7.qn18$@;E,Qt:cy!">
+                                    <field name="VAR" id="mUU;4vD5EQ]t/4`RYyXe">tick2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO1">
+                              <block type="math_change" id="IHqpPonC$~br@*/?5RKU">
+                                <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+                                <value name="DELTA">
+                                  <shadow type="math_number" id=",!//X;4u+R7Rj9#=[!K6">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="math_number" id="@PtYjGgGr|M2_pUJL+Wb">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="__;k#a#vn~Y0o,h+j|p1">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" elseif="1"></mutation>
+                                <value name="IF0">
+                                  <block type="logic_compare" id="JG.CgAF@AJA7Cd/g5%cc">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="{jm^lj83$*v0I@2o{b)I">
+                                        <field name="VAR" id="mUU;4vD5EQ]t/4`RYyXe">tick2</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="variables_get" id="K%(jWBl{3H!zIVXW)W;@">
+                                        <field name="VAR" id="j%Yu.)j[z%#8t*tK{{9{">tick3</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="math_change" id="vw[Lhle|OsmkY|t*fN5c">
+                                    <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+                                    <value name="DELTA">
+                                      <shadow type="math_number" id="S,,I3Uywc%skisn*d2a*">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="math_number" id="qR=u$^uOtdG9fvJ%18qZ">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <value name="IF1">
+                                  <block type="logic_compare" id="zkUlY)TYx,wCN@i{6M[7">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="8sQ0,b`9#/;Z@ZJpjB)/">
+                                        <field name="VAR" id="mUU;4vD5EQ]t/4`RYyXe">tick2</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="variables_get" id="xX-93-@BmS1,rW@rV*4l">
+                                        <field name="VAR" id="j%Yu.)j[z%#8t*tK{{9{">tick3</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO1">
+                                  <block type="math_change" id="dg[b(lKs.!A#N%}n}VE]">
+                                    <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+                                    <value name="DELTA">
+                                      <shadow type="math_number" id="$Cruyc:e0{VT(4w1vt1h">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="math_number" id="MQ6:;3]!?r@DuNzTLs,v">
+                                        <field name="NUM">20</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="/a?dWJ_n_)b]rZrO!Js6">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" elseif="1"></mutation>
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="|GUFkw{L{i!4Dj$-8U/!">
+                                        <field name="OP">GT</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="y_jtb[P[r@Abw-,BAXHO">
+                                            <field name="VAR" id="j%Yu.)j[z%#8t*tK{{9{">tick3</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="variables_get" id="!8MIX|n-)+aCt}9}w7K}">
+                                            <field name="VAR" id="P0JVcK!@E!gy::?QV@;^">tick4</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="math_change" id="]?.N6~JVxa5)q;[7ns}6">
+                                        <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+                                        <value name="DELTA">
+                                          <shadow type="math_number" id=",f~+NW8U%i%5,A=}YyU`">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="math_number" id="}b(UTxLjK7*u[Euuno@Q">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <value name="IF1">
+                                      <block type="logic_compare" id="C3|@z3D^YOY7/;n7i2rv">
+                                        <field name="OP">LT</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="pjgDY]`F@H~c6VMY@{%$">
+                                            <field name="VAR" id="j%Yu.)j[z%#8t*tK{{9{">tick3</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="variables_get" id="{l~.k4(C=L~y**G,T.Uq">
+                                            <field name="VAR" id="P0JVcK!@E!gy::?QV@;^">tick4</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO1">
+                                      <block type="math_change" id="wg9KqGKEAhIz).-N8|u}">
+                                        <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+                                        <value name="DELTA">
+                                          <shadow type="math_number" id="gwSuqu,X8q+$xv.EpJwU">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="math_number" id="iSI,)W}=-O?;@6l3Vlu,">
+                                            <field name="NUM">200</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="notify" id="dw%5,|Q/j~vzL.:t4Xam">
+                                        <field name="NOTIFICATION_TYPE">info</field>
+                                        <field name="NOTIFICATION_SOUND">silent</field>
+                                        <value name="MESSAGE">
+                                          <block type="variables_get" id=",!x}~}`/s}N37{U(.b={">
+                                            <field name="VAR" id="wJ#9VZx~j,}X(b00nt(%">pattern</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="tick_analysis" id="5|$2SgK66Whct/(C-G51" x="1" y="1995">
+    <statement name="TICKANALYSIS_STACK">
+      <block type="controls_if" id="CvI.)}m16nMX^%hVN6y7" collapsed="true">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="r/08nhTTWvd%5aGm]Ok(">
+            <field name="OP">GT</field>
+            <value name="A">
+              <block type="tick" id="L;Zzg5yNgCH5=[6B8vd%"></block>
+            </value>
+            <value name="B">
+              <block type="lists_getIndex" id="GqLd%=uzAXlG$/lODfUv">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" statement="false" at="true"></mutation>
+                <field name="MODE">GET</field>
+                <field name="WHERE">FROM_END</field>
+                <value name="VALUE">
+                  <block type="ticks" id="VCZOvVy8LDG|;che%pnq"></block>
+                </value>
+                <value name="AT">
+                  <block type="math_number" id="aPH/S({0[%w4I=?O(Pc4">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_join" id="Om$bFQ*c+`5D!K7:IzN/">
+            <field name="VARIABLE" id="9PLw!1uWN3{RWC7}!euS">text1</field>
+            <statement name="STACK">
+              <block type="text_statement" id="o/bHQl^W^DW|#*nC:YTL" collapsed="true">
+                <value name="TEXT">
+                  <shadow type="text" id="Qb(S@PK}?={|F9(a{$:R">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="text" id="gP3FWta3ZB.zV%PS8QT?" collapsed="true">
+                    <field name="TEXT">Reset-Up:-  https://donbots.netlify.app</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_statement" id="?VD?L2MwBZVhqIozC{IW">
+                    <value name="TEXT">
+                      <shadow type="text" id="lfdb)@=h]hRP+R0R#^zT">
+                        <field name="TEXT"></field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="notify" id="N(KK`tavLOR*=Q.r^.1!">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <block type="variables_get" id="QCmvWDOa%kSRxg5h=kqG">
+                    <field name="VAR" id="9PLw!1uWN3{RWC7}!euS">text1</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_join" id="IAnLY#k?;n+XjhbBx?5K">
+            <field name="VARIABLE" id="3m([oVg3^OCTbG|INlxI">text2</field>
+            <statement name="STACK">
+              <block type="text_statement" id="0p*cf|U1!vU5YB0:9J}R" collapsed="true">
+                <value name="TEXT">
+                  <shadow type="text" id="VD]YM]L2y|]~MRxTQa#m">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="text" id="Lwp8QIA5!6CdRD[+9D.b">
+                    <field name="TEXT">Reset Down:-https://donbots.netlify.app</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_statement" id="?JQ?lP4:bmJt0o.|J6#?">
+                    <value name="TEXT">
+                      <shadow type="text" id="1xU@$jtXXl-(U(hAlFR6">
+                        <field name="TEXT"></field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="notify" id="w@z?{O;$TWbxcQ/,w+}e">
+                <field name="NOTIFICATION_TYPE">error</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <block type="variables_get" id="pQ4,@jmNNKiu4Fkv]y;v">
+                    <field name="VAR" id="3m([oVg3^OCTbG|INlxI">text2</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="S0:^ZvM037y3f!Qe}-Kb" collapsed="true" x="0" y="2212">
+    <mutation xmlns="http://www.w3.org/1999/xhtml">
+      <arg name="martingale:profit" varid="?^27,*(^pAie=S=e]MF%"></arg>
+      <arg name="martingale:resultIsWin" varid="`=KyXio0t7#)a7ewul()"></arg>
+    </mutation>
+    <field name="NAME">Ultimate Traditional Martingale System Trade Again</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="math_change" id=":8Iway^VLM~o)d*=azHq">
+        <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+        <value name="DELTA">
+          <shadow type="math_number" id="ZP!*-MFQQO%f#5y_cyA?">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="variables_get" id="R_Ksn#v=|0VoEL2:Kk5n">
+            <field name="VAR" id="?^27,*(^pAie=S=e]MF%">martingale:profit</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="Z7ly4JGDR=+9hAUlL;{9">
+            <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="d6%o,xC3e@IEFO=ED)cc">
+                <field name="OP">DIVIDE</field>
+                <value name="A">
+                  <shadow type="math_number" id="Qx|2R9~kOl`8s#P!G-li">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="math_round" id="C=`Jv2YQ,U58$+RxQhm|">
+                    <field name="OP">ROUND</field>
+                    <value name="NUM">
+                      <shadow type="math_number" id="Mx8%i61,N1PyJ/mcyEj8">
+                        <field name="NUM">3.1</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="/FXMmY:)XK[89Ve-4yb#">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <shadow type="math_number" id=":/@X!WL/?2Na}IuSlQnI">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="FIF!#zrWlLBuW*2FROkM">
+                            <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="jvpx*EzsT9[(X*)XAo[A">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_number" id="5)!;fgEp+`2Q^SE#ttJ?">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="bYAF5tv4RGv`A#,}cCz%">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="math_number" id=")tn_`#9ZLZ^Yfe=p3-|D">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="-z00/%WYAtIChB~i,:_p" collapsed="true">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+                <value name="IF0">
+                  <block type="variables_get" id="jA9D!mB3;[+ma-s=ui[j">
+                    <field name="VAR" id="`=KyXio0t7#)a7ewul()">martingale:resultIsWin</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_join" id="Jz;n+w)b%yI4bdVgEY:0">
+                    <field name="VARIABLE" id="{@Cf|OY#3-RIJ7(C6;p!">text3</field>
+                    <statement name="STACK">
+                      <block type="text_statement" id="@a72br*FADO!_~O?yKsg">
+                        <value name="TEXT">
+                          <shadow type="text" id="(5iWOJT+I,`9JdZIVEvF">
+                            <field name="TEXT"></field>
+                          </shadow>
+                          <block type="text" id="w?jdrRbP{ziVQJU-?q^v">
+                            <field name="TEXT">won :</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_statement" id="eCMrMT.CqD]d5_?O^Ds/">
+                            <value name="TEXT">
+                              <shadow type="text" id="PM1y3plIOW6Y$co{;ZR:">
+                                <field name="TEXT"></field>
+                              </shadow>
+                              <block type="variables_get" id="OkGkI;@3%9dc;1_ANBCQ">
+                                <field name="VAR" id="?^27,*(^pAie=S=e]MF%">martingale:profit</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="notify" id="|cCI4H7,^Y#S3oiq90:q">
+                        <field name="NOTIFICATION_TYPE">success</field>
+                        <field name="NOTIFICATION_SOUND">silent</field>
+                        <value name="MESSAGE">
+                          <block type="variables_get" id="MsZZ!%oM#Ij[W%Hg3917">
+                            <field name="VAR" id="{@Cf|OY#3-RIJ7(C6;p!">text3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_join" id="ldx3llrtNazpV9j=d.Z^">
+                    <field name="VARIABLE" id="3.v1/}}sfHXEDW,y1OlS">text4</field>
+                    <statement name="STACK">
+                      <block type="text_statement" id="~vArCmWdw_O|gYj3]?2=">
+                        <value name="TEXT">
+                          <shadow type="text" id="|rf|H9v(SXXYVQF-2Q0}">
+                            <field name="TEXT"></field>
+                          </shadow>
+                          <block type="text" id="4lu?zLp{us=#|/Nc3g3(">
+                            <field name="TEXT">loss :</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_statement" id="Y4?3A;}YXDKeWlfbY(~J">
+                            <value name="TEXT">
+                              <shadow type="text" id="VF-.e5X{z{Qpe?un1#yE">
+                                <field name="TEXT"></field>
+                              </shadow>
+                              <block type="math_single" id="P:1?W]Of}Lroa4L^em57">
+                                <field name="OP">ABS</field>
+                                <value name="NUM">
+                                  <shadow type="math_number" id="N7XsIMW=R:`chyw%}E,W">
+                                    <field name="NUM">9</field>
+                                  </shadow>
+                                  <block type="variables_get" id="F3yY8SC0NR,}=lP#~L/j">
+                                    <field name="VAR" id="?^27,*(^pAie=S=e]MF%">martingale:profit</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="notify" id="Mi+KC^T%GR;QQImRPny{">
+                        <field name="NOTIFICATION_TYPE">warn</field>
+                        <field name="NOTIFICATION_SOUND">silent</field>
+                        <value name="MESSAGE">
+                          <block type="variables_get" id="%;?$?P8I+:Qk7:ssnI12">
+                            <field name="VAR" id="3.v1/}}sfHXEDW,y1OlS">text4</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="procedures_callnoreturn" id="Plv~kX]`+^)3{(b^/^?`">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" name="Traditional Martingale System Core Functionality">
+                      <arg name="martingale:resultIsWin"></arg>
+                    </mutation>
+                    <value name="ARG0">
+                      <block type="variables_get" id="M[KM~pH-1xhFNTEGlI`7">
+                        <field name="VAR" id="`=KyXio0t7#)a7ewul()">martingale:resultIsWin</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_join" id="$lY7,L^I]zK{A9s!CT3:">
+                        <field name="VARIABLE" id="bPS*6,*)uEsccQxxho5m">text5</field>
+                        <statement name="STACK">
+                          <block type="text_statement" id="58/3Yf~@K@=8z3*-,YQ]">
+                            <value name="TEXT">
+                              <shadow type="text" id="AP/r8(9HnW,]9/H^gJ,v">
+                                <field name="TEXT"></field>
+                              </shadow>
+                              <block type="text" id="J`N/U3N4$ZhGY=)AnFXB">
+                                <field name="TEXT">profit : </field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_statement" id="u$5sPku-LF#Gk)M_=cl:">
+                                <value name="TEXT">
+                                  <shadow type="text" id="ouS;M5oiJ/XY92Jc_|*:">
+                                    <field name="TEXT"></field>
+                                  </shadow>
+                                  <block type="variables_get" id=":+Yw.4Hm]r4h|*%e~CK,">
+                                    <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="notify" id="r8Q@a5@Zhs|{VMb~mvJ[">
+                            <field name="NOTIFICATION_TYPE">info</field>
+                            <field name="NOTIFICATION_SOUND">silent</field>
+                            <value name="MESSAGE">
+                              <block type="variables_get" id="=$]f_Vh]{QAMi@-tysQW">
+                                <field name="VAR" id="bPS*6,*)uEsccQxxho5m">text5</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="/G{o5trR7N:jn);rIv$g">
+                                <field name="VAR" id="K/KD$k2xbA?{-Tooy5fg">martingale:tradeAgain</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="nddR*KtA[$+an77KBAZy">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_if" id="?MMpiYTk^,lPvG7[y71-" collapsed="true">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="T*lyI]HeBgh+97:jZTU(">
+                                        <field name="OP">LT</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="6BAee3C{K9P{_@5Z[G)o">
+                                            <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="variables_get" id="IsC`n:@7HZ1ajb(L(j{y">
+                                            <field name="VAR" id="QVgmz@/y~j*FU~^xzA{Q">martingale:expectedProfit</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="controls_if" id="y0xG9uijXJVt9*o/YDWw">
+                                        <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+                                        <value name="IF0">
+                                          <block type="logic_compare" id="xHHm$;#)89}5z_K[-!`k">
+                                            <field name="OP">GT</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="E#?:/L6yHaG29k`6obP:">
+                                                <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_single" id="%Z.7Y%igY1YzIcEIldmk">
+                                                <field name="OP">NEG</field>
+                                                <value name="NUM">
+                                                  <shadow type="math_number" id="9z]!j}CRAb9cJ1cHo3Z-">
+                                                    <field name="NUM">9</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="x.rcqY@b/D2sBF@.q4*U">
+                                                    <field name="VAR" id="z+BgrJTJ%4go+knUnMe^">martingale:maximumLoss</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="variables_set" id="qI]7zN%75Q)[d9%Mi7%%">
+                                            <field name="VAR" id="K/KD$k2xbA?{-Tooy5fg">martingale:tradeAgain</field>
+                                            <value name="VALUE">
+                                              <block type="logic_boolean" id="W!Wt)p,:4eQS!1URB|Uu">
+                                                <field name="BOOL">TRUE</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <statement name="ELSE">
+                                          <block type="text_join" id="R@#:9${SdqNvNn-sXTO!">
+                                            <field name="VARIABLE" id="]E3,:*/`6fjYRJH;ijkl">text6</field>
+                                            <statement name="STACK">
+                                              <block type="text_statement" id="Hw](dO)mpipkf.f8__V;">
+                                                <value name="TEXT">
+                                                  <shadow type="text" id=",;5d?e,TMRIrp|]qa)w`">
+                                                    <field name="TEXT"></field>
+                                                  </shadow>
+                                                  <block type="text" id="5+6SYx!j`nT3b]^RjB_X">
+                                                    <field name="TEXT">oh..sorry:- Pause Trading:- Switch Markets:- Good-Luck Next Time:-  (T.me/binaryboss101) </field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="text_statement" id="LyP~^(T$L-M#]:3E]3GY">
+                                                    <value name="TEXT">
+                                                      <shadow type="text" id="j`3nLy/Y+VPJk=bE8@7g">
+                                                        <field name="TEXT"></field>
+                                                      </shadow>
+                                                      <block type="math_single" id="5?x1)eLG_alav2}]l%H.">
+                                                        <field name="OP">NEG</field>
+                                                        <value name="NUM">
+                                                          <shadow type="math_number" id="O5Rb49}8q*|r_p,0,KIC">
+                                                            <field name="NUM">9</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="5_Y.U|2Z,|^*i.HHI5aH">
+                                                            <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="text_print" id="A@8.Vou~yxG;nyc{ulJ)">
+                                                <value name="TEXT">
+                                                  <shadow type="text" id="wM.Tu1[NJ![y3w~33J+[">
+                                                    <field name="TEXT">abc</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="s[Q:hV(huCcY4a(bEK7D">
+                                                    <field name="VAR" id="]E3,:*/`6fjYRJH;ijkl">text6</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </statement>
+                                    <statement name="ELSE">
+                                      <block type="text_join" id="-EvS%I]Qk,8{J/+(;cmf" collapsed="true">
+                                        <field name="VARIABLE" id=")yJp39aLu^1J5YngnIvH">text7</field>
+                                        <statement name="STACK">
+                                          <block type="text_statement" id="GT^$OX~?Qiq]S`c|1.85">
+                                            <value name="TEXT">
+                                              <shadow type="text" id="T%@.RGXC(TUC~9f(I8Bc">
+                                                <field name="TEXT"></field>
+                                              </shadow>
+                                              <block type="text" id="sI:TG0X}d~WNT/um_W~Y">
+                                                <field name="TEXT">Profit Has Been Hit:- Bot Courtesy of Ultimate Trading Scripts:- (T.me/binaryboss101) $$$ ==</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="text_statement" id="$hig=aP#tr.arLTjIS0u">
+                                                <value name="TEXT">
+                                                  <shadow type="text" id="KV7x6Up:Tv!~DS?u=9v]">
+                                                    <field name="TEXT"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="C%`XFS#MP;tT.BI)2iaT">
+                                                    <field name="VAR" id="i*j,5/RUctPN)jp9/FYC">martingale:totalProfit</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="text_print" id="gPN5x)[;gHM6C4KVjMSi">
+                                            <value name="TEXT">
+                                              <shadow type="text" id="lcn@F_1!FdXadCZSn9N~">
+                                                <field name="TEXT">abc</field>
+                                              </shadow>
+                                              <block type="variables_get" id=".L3ANyr^hzMM,Uz(jpFT" collapsed="true">
+                                                <field name="VAR" id=")yJp39aLu^1J5YngnIvH">text7</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="dYB/4z^,er^AySTS$nBQ">
+        <field name="VAR" id="K/KD$k2xbA?{-Tooy5fg">martingale:tradeAgain</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="1X:6%SH[$AW!EA*XG)[L" x="8" y="2310">
+    <mutation xmlns="http://www.w3.org/1999/xhtml">
+      <arg name="martingale:resultIsWin" varid="`=KyXio0t7#)a7ewul()"></arg>
+      <arg name="+256757815846 for more information." varid="]dHn,alxU4:`V7aFWz+9"></arg>
+    </mutation>
+    <field name="NAME">Traditional Martingale System Core Functionality</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="T/Ky5uT_9e+07h0fA-is" collapsed="true">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+        <value name="IF0">
+          <block type="variables_get" id="CE9PNJtQ,eKn57B`QNO9">
+            <field name="VAR" id="`=KyXio0t7#)a7ewul()">martingale:resultIsWin</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="^V@_RCv~52F*bHPkhz~:">
+            <field name="VAR" id=";:xeYF6WeSuF:TVh8b3x">martingale:size</field>
+            <value name="VALUE">
+              <block type="math_number" id="n/hx=o@UEy:yaGGzg6zg">
+                <field name="NUM">1.05</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="variables_set" id="i=~)Iwz)Ix.s-${zbr_|">
+            <field name="VAR" id=";:xeYF6WeSuF:TVh8b3x">martingale:size</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="MQRo{TE[CYk;32V!.?2}">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <shadow type="math_number" id="5)3TjYmm?M8?#G|X?j,I">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="variables_get" id=";dz8/;8Ec-GMzQ!q~rHN">
+                    <field name="VAR" id=";:xeYF6WeSuF:TVh8b3x">martingale:size</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="U={E#9LP}x^n}}z.gI+t">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="variables_get" id="};,g@q`V.rv.Wf*u]V/]">
+                    <field name="VAR" id="4]OMOa$~ZaX`kd4@99x7">martingale:multiplierSize</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
